@@ -1,0 +1,95 @@
+#loginbg{
+	.rest;
+	background-image: url('../img/Fondo_Black.png');
+	background-color: #6D6D6D;
+	min-height: 500px;
+	position: relative;
+	padding: 100px;
+	margin-bottom: -10px;
+
+	#login{
+		.rest;
+		width: 350px;
+		height: 250px;
+		background-color: rgba(250, 250, 250, 0.2);
+		border-radius: 15px;
+		box-shadow: 0 0 3px rgba(7, 7, 7, 0.1);
+
+
+		form{
+			width: 300px;
+			padding: 15px;
+			margin: 10px;
+
+			vertical-align: middle;
+			height: 200px;
+			display: inline-block;
+			text-align: center;
+			border-radius: 10px;
+			background-color: #F9F9F9;
+			box-shadow: inset 10px 10px 120px rgba(21, 21, 21, 0.2);
+
+		
+
+			input{
+				margin-top: 10px;
+				width: 280px;
+
+				&[type="text"], &[type="password"]{
+					height: 2.2em;
+					border-radius: .5em;
+					box-shadow: inset 0px 4px 5px #BFBFBF;
+					padding: 2px 2px 2px 4px;
+					background-color: #E7E7E7;
+				}
+
+
+				&[type="submit"]{
+					.gradient(~"linear-gradient(60grad,  #008BD6 0%, #158FFF 100%)");
+					box-shadow: inset  -1px 0 1px rgba(6, 6, 6, 0.2), 0 0 3px #848484;
+					text-shadow: 0 0 3px rgba(52, 52, 52, 0.5);
+					height: 35px;
+					width: 200px;
+					margin-top: 25px;
+					border-radius: 0 3px 3px 0;
+					font-weight: bolder;
+					font-size: 1.2em;
+					position: absolute;
+					color: #FFFFFF;
+					margin-left: -165px;
+
+					&:hover{
+						color: #252525;
+						box-shadow: inset  -5px 2px 9px rgba(200, 200, 230, 0.3);
+						.gradient(~"linear-gradient(60grad,  darken(#008BD6,2%) 0%, darken(#158FFF,2%) 100%)");
+						.transition(~"all 0.3s");
+					}
+
+				}
+
+				&:focus,{
+
+				} 
+
+				&:active{
+
+				}
+
+			}
+		}
+
+		p#plog{
+			height: 20px;
+			font-size: 1.4em;
+			text-align: left;
+			padding: 3px;
+			width: 270px;
+			font-weight: bold;
+			color: #252525;
+			border-radius: 4px 4px 0 0 ;
+
+		}
+
+	}
+	
+}
