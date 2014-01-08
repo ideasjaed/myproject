@@ -1,0 +1,60 @@
+#Directorio{
+	margin-top: 40px;
+	.tiulo_Directorio{
+		display: inline-block;
+		background-color: @rojoP;
+		width: 80%;
+		min-width: 700px;
+		height: 44px;
+		margin-left: 2%;
+		color: #FFFFFF;
+		font-size: 1.4em;
+		border-radius:  20px 2px 2px 20px;
+		vertical-align:top;
+		box-shadow: 0 0 4px rgba(21, 21, 21, 0.2);
+		.background-image(linear-gradient(bottom 25grad, @rojoP, lighten(@rojoP,5%)));
+		h4{
+			color: #FFFFFF;
+			display: inline;
+			position: relative;
+			top:-10px;
+
+		}
+
+		span{
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+			margin-top: 4px;
+			margin-left: 5px;
+			margin-right: 10px;
+			border-radius: 50%;
+			background-color: #FFFFFF;
+			border: dashed 1px #3D3D3D;
+			background-image: url('../img/right.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			line-height: 34px;
+		}
+	}
+
+	ul{
+		display: inline-block;
+		vertical-align: top;
+		width: 40%;
+
+		li{
+			&:first-child{
+				font-size: 1.2em;
+				font-weight: 600;
+			}
+			&:last-child{
+				font-weight: 600;	
+				color: #1E1E1E;
+			}
+
+		}
+	}
+
+
+}

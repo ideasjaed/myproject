@@ -1,0 +1,23 @@
+{% extends "plantilla_SAED.html" %}
+
+
+{% block titulo %}C E S I C - SAED{% endblock titulo %}
+
+
+{% block contenido %}
+  
+<ul id="SaedMenuInicio">
+	<li> <a href='/SAED/calificaciones'><img src="{{ STATIC_URL}}img/IconoBL2.png" /> <p>Calificaciones</p> </a></li>
+	<li> <a href='/SAED/inscripciones'> <img src="{{ STATIC_URL}}img/IconoBL3.png" /> <p>Inscripciones</p>  </a></li>
+	<li> <a href='/SAED/calendario'>    <img src="{{ STATIC_URL}}img/IconoBL5.png" /> <p>Calendario</p>     </a></li>
+	<li> <a href='/SAED/encuestas'>     <img src="{{ STATIC_URL}}img/IconoBL6.png" /> <p>Encuestas</p>      </a></li>
+</ul>
+
+
+ <h2>Hi {{ful_name}} wlcome</h2>
+<style>
+  nav{
+    display: none;
+  }
+</style>
+{% endblock contenido %}

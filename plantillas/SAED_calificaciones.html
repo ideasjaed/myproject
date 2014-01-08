@@ -1,0 +1,73 @@
+{% extends "plantilla_SAED.html" %}
+
+
+{% block titulo %}C E S I C - SAED{% endblock titulo %}
+
+
+{% block contenido %}
+<section>
+	<table>
+		<tr>Datos Generales del Alumno</tr>
+		<td>Matricula</td>
+		<td>{{cal.matricula}}</td>
+		<tr></tr>
+		<td>Nombre</td>
+		<td>{{cal.Nombre}}</td>
+		<tr></tr>
+		<td>Ap. Paterno</td>
+		<td>{{cal.Ap_paterno}}</td>
+		<tr></tr>
+		<td>Ap. Materno</td>
+		<td>{{cal.Ap_materno}}</td>
+		<tr></tr>
+		<td>Fecha de Nacimiento</td>
+		<td>{{cal.fecha_nacimiento}}</td>
+		<tr></tr>
+		<td>Estado Civil</td>
+		<td>{{cal.estado_civil}}</td>
+		<tr></tr>
+		<td>C.U.R.P</td>
+		<td>{{cal.curp}}</td>
+		<tr></tr>
+		<td>Datos Academicos</td>
+		<tr></tr>
+		<td>Carrera</td>
+		<td>{{cal.Nombre_carrera}}</td>
+		
+		<tr></tr>
+		<td>Grado Actual</td>
+		<td>{{cal.grado}}</td>
+		<td>Gupo Actual</td>
+		<td>{{cal.grupo}}</td>
+
+		<tr></tr>
+		<td>Situacion Academica</td>
+</table>
+
+
+<table>
+	<tr>Calificaciones</tr>
+	<td>Tetramestre:</td>
+	<tr></tr>
+	<td>Materia</td>
+	
+	<tr></tr>
+	
+	<td>{{mate.Nombre_materia}}</td>
+	<td>{{mate.Calificacion}}</td>
+	<tr></tr>
+	<tr>Profesor</tr>
+	<td>P1</td>
+	<td>P2</td>
+	<td>P3</td>
+	<td>Cal. Tetra</td>
+
+</table>
+
+</section>
+	
+
+
+
+
+{% endblock contenido %}

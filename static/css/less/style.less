@@ -1,0 +1,31 @@
+@negroP:rgb(26, 26, 26);  	@negroPa:rgba(26, 26, 26, 0.5);	@negroS:rgb(51, 51, 51);  	@negroSa:rgba(51, 51, 51, 0.3);	@rojoP:rgb(188,0,31);		@rojoPa:rgba(188,0,31, 0.3);	@rojoS:rgb(222, 0, 37);		@rojoSa:rgba(222,0 ,37 , 0.3);	@rojoT:rgb(255,66 ,57 );	@rojoTa:rgba(255,66 ,57, 0.3); 	@blanco:rgb(253, 253, 253);
+.rest(){margin: 0px auto;padding: 0px;border:0px;}
+.size(){min-width: 750px;	max-width: 1280px;	width: 95%;}
+.Sombra1(){	box-shadow:0 0 5px @negroS , inset 0px 0px 3px @negroSa;}
+.ihead(){  .transition(~"all 0.35s ease-in-out");border-radius: 4px;}
+
+a{text-decoration: none;}
+ul,li{list-style: none;}
+
+@font-face{
+font-family:"JEBold";
+src: url('../RobotoCondensed-Bold.ttf'), url('../RobotoCondensed-BoldItalic.ttf');
+}
+@font-face{
+	font-family: "JERegular";
+	src:url('../RobotoCondensed-Regular.ttf');
+}
+
+p{
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+@import url('lesshat.less');
+@import url('body.less');
+@import url('HeaderIconos.less');
+@import url('navegacion.less');
+
+
