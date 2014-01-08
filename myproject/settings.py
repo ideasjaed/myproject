@@ -14,17 +14,15 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),                  # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', 
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': '',
         'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'HOST': '',                     
+        'PORT': '',                     
     }
 }
 
-# Hosts/domain names that are valid for this site; required if DEBUG is False
-# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['jaed.webfactional.com','www.sistemacesic.com']
 
 TIME_ZONE = 'UTC'
@@ -71,7 +69,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
@@ -83,7 +80,6 @@ EMAIL_HOST_USER='sistemacesic@gmail.com'
 EMAIL_HOST_PASSWORD='chio1234'
 EMAIL_PORT=587
 
-# Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 TEMPLATE_DIRS = (
