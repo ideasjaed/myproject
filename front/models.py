@@ -6,6 +6,7 @@ class Slide(models.Model):
 	titulo = models.CharField(max_length=100)
 	contenido = models.TextField()
 	fecha = models.DateTimeField(auto_now_add=True)
+	imagen = models.ImageField(upload_to='carrera',verbose_name='imagen slite',blank=True)
 	def __unicode__ (self):
 		return self.titulo
 
@@ -67,12 +68,6 @@ class Alumno(models.Model):
     		return Carrera.objects.get(id=1)
 	Nombre_carrera = models.ForeignKey(Carrera,default=get_foo2)
 
-	
-
-
-
-
-
 	def __unicode__(self):
 		return self.Ap_paterno
 
@@ -91,17 +86,17 @@ class Materia(models.Model):
 class Calificacione(models.Model):
 	alumno = models.ForeignKey(Alumno)
 	
-	cal0 = 'cala'
-	cal1 = 'Calb'
-	cal2 = 'Calc'
-	cal3 = 'Cald'
-	cal4 = 'Cale'
-	cal5 = 'Calf'
-	cal6 = 'Calg'
-	cal7 = 'Calh'
-	cal8 = 'Cali'
-	cal9 = 'Calj'
-	cal10 = 'Calk'
+	cal0 = '0'
+	cal1 = '1'
+	cal2 = '2'
+	cal3 = '3'
+	cal4 = '4'
+	cal5 = '5'
+	cal6 = '6'
+	cal7 = '7'
+	cal8 = '8'
+	cal9 = '9'
+	cal10 = '10'
 
 	califica=(
 	(cal0,'0'),
@@ -129,6 +124,7 @@ class Docente(models.Model):
 	A_paterno = models.CharField(max_length= 100,verbose_name='Apellido Paterno')
 	A_materno = models.CharField(max_length=100 ,verbose_name='Apellido Materno')
 	Nombre = models.CharField(max_length=100,verbose_name='Nombre(s)')
-
+	email = models.CharField(max_length=100,verbose_name='Correo Electronico',blank=True)
+	telefono = models.CharField(max_length=100,verbose_name='Telefono',blank=True)
 	def __unicode__(self):
 		return self.Nombre
