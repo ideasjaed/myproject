@@ -78,6 +78,9 @@
             <p>Contacto:<span> Calle Central S/N Barrio Concepción Copainala, Chiapas,C.P 29620 </span></p>
             <div id="PFdir"><p><a href='/directorio'>Directorio</a></p></div>
         </footer>
+        <div id="Autor">
+          <p>© 2014 <span>JAED - Todos los derechos reservados</span></p>
+        </div>
     </section>
     
 
@@ -96,6 +99,7 @@
      var alto = $(window).height()-130;
      var ancho = $(window).width();
      $(".contenido").css("min-height",alto);
+     $("#loginbg").css("min-height",alto-190);
      if (ancho < 800){
            $(".da-img img").css('opacity', '.5');
            $(".da-slide p").css('width', '90%');
@@ -116,6 +120,8 @@
       var ancho = $(window).width();
 
      $(".contenido").css("min-height",alto);
+     $("#loginbg").css("min-height",alto-190);
+
       if (ancho < 800){
            $(".da-img img").css('opacity', '.5');
            $(".da-slide p").css('width', '80%');

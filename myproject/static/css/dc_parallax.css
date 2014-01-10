@@ -1,17 +1,9 @@
-/* dCodes Framework:(c) TemplateAccess */
-.dc_clear {
-  clear: both;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  font-size: 0px;
-  line-height: 0px;
-}
+
 .da-slider {
   top: -1px;
   width: 100%;
   min-width: 520px;
-  height:330px;
+  height: 330px;
   position: relative;
   margin: 0px auto;
   overflow: hidden;
@@ -25,6 +17,7 @@
   transition: background-position 1s ease-out 0.3s;
   z-index: 10;
 }
+
 .da-slide {
   position: absolute;
   width: 100%;
@@ -37,35 +30,28 @@
 .da-slide-current {
   z-index: 30;
 }
-.da-slider-fb .da-slide {
-  left: 100%;
-}
 .da-slider-fb .da-slide.da-slide-current {
   left: 0px;
 }
 .da-slide h2,
 .da-slide p,
-.da-slide .da-link,
 .da-slide .da-img {
   position: absolute;
   opacity: 0;
-  left: 110%;
+
 }
 .da-slider-fb .da-slide h2,
-.da-slider-fb .da-slide p,
-.da-slider-fb .da-slide .da-link {
-  left: 10%;
+.da-slider-fb .da-slide p{
   opacity: 1;
 }
 .da-slider-fb .da-slide .da-img {
-  left: 60%;
   opacity: 1;
 }
 .da-slide h2 {
   color: #CA3535;
   font-size: 55px;
   width: 50%;
-  top: 10px;
+  top: -20px;
   white-space: nowrap;
   z-index: 10;
   text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.1);
@@ -74,11 +60,11 @@
 }
 .da-slide p {
   width: 45%;
-  top: 125px;
+  top: 100px;
   color: #666;
   font-size: 18px;
   line-height: 26px;
-  height: 160px;
+  height: 170px;
   overflow: hidden;
   font-family: Arial, sans-serif;
   font-weight: 400;
@@ -87,9 +73,13 @@
 .da-slide .da-img {
   text-align: center;
   width: 25%;
-  top: 30px;
-  height: 256px;
+  top: 5px;
+  height: 320px;
+  overflow: hidden;
   line-height: 320px;
+}
+.da-img img{
+  max-height: 320px;
 }
 
 .da-dots {
@@ -176,8 +166,7 @@
   right: 0px;    
 }
 .da-slide-current h2,
-.da-slide-current p,
-.da-slide-current .da-link {
+.da-slide-current p{
   left: 10%;
   opacity: 1;
 }
