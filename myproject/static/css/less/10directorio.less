@@ -3,7 +3,7 @@
 	.tiulo_Directorio{
 		display: inline-block;
 		background-color: @rojoP;
-		width: 80%;
+		width: 90%;
 		min-width: 700px;
 		height: 44px;
 		margin-left: 2%;
@@ -41,10 +41,29 @@
 	ul{
 		display: inline-block;
 		vertical-align: top;
-		width: 40%;
+		width: 45%;
 
 		li{
-			&:first-child{
+			line-height: 25px;
+			white-space: nowrap;	
+
+			&:first-child {
+				padding-right: 3px;
+				img{
+					.rest;
+					height: 100px;
+					width: 90px;
+					overflow: hidden;
+					margin-right: 3px;
+					padding: 3px;
+					float: left;
+					margin-top: 0px;
+					box-shadow: 0 0 3px #737373;
+					border-radius: 3px;
+				}
+			}
+
+			&:nth-child(2){
 				font-size: 1.2em;
 				font-weight: 600;
 			}
@@ -55,6 +74,5 @@
 
 		}
 	}
-
 
 }

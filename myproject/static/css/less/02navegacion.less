@@ -1,5 +1,5 @@
 nav ul li{
-	padding: 3px 2px 3px 2px;
+	padding: 4px 2px 3px 2px;
 	.transition(~"all 0.42s ease-in-out");	
 	&:hover{
 		background-color:rojoT;
@@ -24,8 +24,20 @@ nav	ul{
 		text-shadow:0px 0px 1px @negroSa;
 		text-align: center;
 		line-height: 10px;
-		padding: 1px 10px 0px 10px;
+		padding: 0px 6px 0px 6px;
+		display: inline-block;
 		.transition(~"all .35s ease-in-out");
+
+		span.featured-icon{
+			.rest;
+			display: inline-block;
+			padding: 0 3px 0 0 ;
+			font-size: 1em;
+			opacity: 0.4;
+			color: rgb(51, 51, 51);
+			text-shadow:0 0 3px rgba(21, 21, 21, 0.5);
+			.transition(~"all .3s ease-in")
+		}
 	}
 }
 
@@ -88,4 +100,12 @@ nav>ul{
 
 nav ul li a:hover{
 	color:red;
+
+	span.featured-icon{
+			font-size: 1.1em;
+			opacity: 0.9;
+			color: rgb(51, 51, 51);
+			text-shadow:0 0 3px rgba(21, 21, 21, 0.5);
+			.transition(~"all .4s ease-in-out")
+	}
 }

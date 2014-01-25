@@ -1,0 +1,107 @@
+{% extends "plantilla.html" %}
+
+
+{% block titulo %}C E S I C - Oferta Educativa{% endblock titulo %}
+
+
+{% block contenido %}
+<div id="OEducativa-contenido">
+{% for dato in datos %}
+{%if dato.tipo == 'Licenciatura' %}  
+<section class="OEduc">
+  <section class ="oe2">
+    <a name="LSistemas"></a>
+  <aside id="fimg"> 
+    <img src='{{MEDIA_URL}}{{dato.imagen}}' alt=""></aside>
+    <h1 >{{dato.nombre|title}}</h1>
+  <section>
+    <h2>Perfil de Ingreso</h2>
+    <p>{{dato.p_ingreso}}</p>
+    <br>
+  </section>
+  <section>
+    <h2>Perfil del egresado</h2>
+    <p>{{dato.p_egreso}}</p>
+  </section>
+
+  <h2><a target="_blank"  href="{{MEDIA_URL}}{{dato.m_c}}">Ver Mapa Curricular</a></h2>
+  </section>
+</section>
+{% endif %}
+{% endfor %}
+
+
+
+{% for dato in datos %}
+{% if dato.tipo == 'Tecnico' %}
+<section class="OEduc">
+  <section class ="oe2">
+    <a name="Computo"></a>
+  <aside id="fimg"> 
+    <img src='{{MEDIA_URL}}{{dato.imagen}}' alt=""></aside>
+    <h1 >{{dato.nombre|title}}</h1>
+  <section>
+    <h2>Perfil de Ingreso</h2>
+    <p>{{dato.p_ingreso}}</p>
+    <br>
+  </section>
+  <section>
+    <h2>Perfil del egresado</h2>
+    <p>{{dato.p_egreso}}</p>
+  </section>
+   <h2><a target="_blank"  href="{{MEDIA_URL}}{{dato.m_c}}">Ver Mapa Curricular</a></h2>
+  </section>
+</section>
+{% endif %}
+{% endfor %}
+
+{% for dato in datos %}
+{% if dato.tipo == 'Preparatoria' %}
+<section class="OEduc">
+  <section class ="oe2">
+    <a name="Prepa"></a>
+  <aside id="fimg"> 
+    <img src='{{MEDIA_URL}}{{dato.imagen}}' alt=""></aside>
+    <h1 >{{dato.nombre|title}}</h1>
+  <section>
+    <h2>Perfil de Ingreso</h2>
+    <p>{{dato.p_ingreso}}</p>
+    <br>
+  </section>
+  <section>
+    <h2>Perfil del egresado</h2>
+    <p>{{dato.p_egreso}}</p>
+  </section>
+  <h2><a target="_blank"  href="{{MEDIA_URL}}{{dato.m_c}}">Ver Mapa Curricular</a></h2>
+  </section>
+</section>
+{% endif %}
+{% endfor %}
+
+{% for dato in datos %}
+{% if dato.tipo == 'Idiomas' %}
+<section class="OEduc">
+  <section class ="oe2">
+    <a name="Idioma"></a>
+  <aside id="fimg"> 
+    <img src='{{MEDIA_URL}}{{dato.imagen}}' alt=""></aside>
+    <h1 >{{dato.nombre|title}}</h1>
+  <section>
+    <h2>Perfil de Ingreso</h2>
+    <p>{{dato.p_ingreso}}</p>
+    <br>
+  </section>
+  <section>
+    <h2>Perfil del egresado</h2>
+    <p>{{dato.p_egreso}}</p>
+  </section>
+
+  <h2><a target="_blank"  href="{{MEDIA_URL}}{{dato.m_c}}">Ver Mapa Curricular</a></h2>
+  </section>
+</section>
+{% endif %}
+{% endfor %}
+
+</div>
+
+{% endblock contenido %}

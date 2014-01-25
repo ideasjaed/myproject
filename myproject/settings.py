@@ -37,16 +37,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_ROOT = '/home/jaed/webapps/static_media/carga'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'myproject/carga')
+#'/home/jaed/webapps/static_media/carga'
+
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = '/home/jaed/webapps/static_media'
+STATIC_ROOT = os.path.join( BASE_DIR, 'static') 
+
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ( os.path.join( BASE_DIR, 'myproject/static'),
-
+STATICFILES_DIRS = ( 
+    os.path.join( BASE_DIR, 'myproject/static'),
     )
 
 STATICFILES_FINDERS = (
@@ -84,19 +87,22 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,'myproject/plantillas'),
+    os.path.join(BASE_DIR,'myproject/plantillas/publico'),
+    os.path.join(BASE_DIR,'myproject/plantillas/SAED'),
 )
 
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'front',
+    'publico',
     'saed',
+    'inscripcion',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

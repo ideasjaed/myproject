@@ -1,0 +1,95 @@
+{% extends "plantilla.html" %}
+{% block titulo %}Sistema Cesic{% endblock titulo %}
+{% block style %}  
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/dc_parallax.css" />
+{% endblock style %}
+
+{% block contenido %}
+	<!--Slide  Inicio -->
+	<div style="width:100%; margin:0 auto; padding:0px; position:relative;"> 
+		<div id="da-slider" class="da-slider">
+			{% for slide in s %}
+			<div class="da-slide"> 
+				<h2>{{slide.titulo}}</h2>
+				<p>{{slide.contenido}}</p>
+				<div class="da-img"><img src="{{MEDIA_URL}}{{slide.imagen}}" alt="image01" /></div>
+			</div>
+			{% endfor %}
+			<div class="da-arrows">
+				<span class="da-arrows-prev">anterior</span>
+				<span class="da-arrows-next">siguiente</span>
+			</div> 
+		</div>  
+	</div>
+	<!--Slide  Fin -->
+	<!-- barra de inscripcion y reinscripcion -->
+	<section id="Ix_sub">
+		<ul>
+			<p>Proceso de Admisión</p>
+			<li><span class="icon featured-icon  icon-laptop"></span><a href="inscripcion/licenciatura/">Licenciatura</a></li><!-- 
+			--><li class="lleft"><span class="icon featured-icon  icon-book  ileft"></span><a href="inscripcion/tecnico">Carrera Tecnica</a></li><!-- 
+			--><li><span class="icon featured-icon  icon-pencil"></span><a href="inscripcion/preparatoria/">Preparatoria Abierta</a></li><!-- 
+			--><li class="lleft"><span class="icon featured-icon   icon-comments ileft"></span><a href="inscripcion/idioma/">Ingles</a></li>
+		</ul>
+
+	</section>
+
+	<!-- barra de inscripcion y reinscripcion -->
+
+
+	<section id="index_oferta">
+		<ul id="index-cv">
+			<li>
+				<aside></aside>
+				<h6>Licenciaturas</h6>	
+				<p>Realiza tus Estudios en solo 3 años con un plan de estudios profesional. <br>
+				Contamos con el reconocimiento de validez oficial REVOE <span>07PSU0178S PSU-208/2012.</span></p>
+				<div><a href="/ofertaEducativa#LSistemas">ver mas</a></div>
+			</li>
+			<li>
+				<aside></aside>
+				<h6>Carreras Tecnicas</h6>	
+				<p>Con 13 años que nos respaldan contamos con carreras tecnicas solo necesitas tener concluida la primaria.
+				Garantizamos tu certificacion con la clave:<span> 07PBT0361R.</span></p>
+
+				<div><a href="/ofertaEducativa#Computo">ver mas</a></div>
+			</li>
+			<li>
+				<aside></aside>
+				<h6>Preparatoria Abierta</h6>	
+				<p>Continua con tus Estudios con nosotros contamos con un plan de estudios profesional. <br>
+				Verificanos con nuestro <span>N° DE SEDE 237.</span></p>
+				<div><a href="/ofertaEducativa#Prepa">ver mas</a></div>
+			</li>
+			<li>
+				<aside></aside>
+				<h6>Ingles</h6>	
+				<p>Para una mejor integración en tu educación te ofrecemos el Centro de capacitación en la enseñanza del idioma Ingles. <span>Nuestra clave de registro 07PBT0621N</span></p>
+				<div><a href="/ofertaEducativa#Idioma">ver mas</a></div>
+			</li>
+		</ul>
+	</section>
+
+{% endblock contenido %}
+
+{% block script %}
+<script type="text/javascript" src="{{STATIC_URL}}js/modernizr.custom.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}js/jquery.cslider.js"></script>
+
+<script type="text/javascript">
+$(function() {
+
+$('#da-slider').cslider({
+autoplay    : true, // auto play slider on load
+bgincrement : 450
+});
+
+});
+</script> 
+
+
+
+
+{% endblock script %}
+	</section>
+

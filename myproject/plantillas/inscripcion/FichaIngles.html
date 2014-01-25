@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FICHA</title>
+	      <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL}}css/09ficha.less">
+      <script type="text/javascript" src="{{STATIC_URL}}js/less.js"></script>
+</head>
+<body>
+<section  id= "contenido">
+	<header>
+	<img style="width: 160px;"  src="{{ STATIC_URL}}img/2.png">
+	<div id="FHead" style="margin-left: 0px;">
+		<h1>Centro de Capacitacion en la enseñanza </h1>
+		<h2>del idioma ingles</h2>
+	</div>
+	<h3>CEDULA DE INSCRIPCION</h3>
+	<div id="foto">
+		<span>FOTO</span>
+	</div>
+	</header>
+
+	<section id="datosPersonales">
+			<h6>Datos Personales</h6><!--
+		--><p>{{form.ap_paterno}}</p><!--
+		--><p>{{form.ap_materno}}</p><!--
+		--><p>{{form.nombre}}</p><!--
+		--><p>{{form.curp}}</p>
+			
+			<span>AP.PATERNO</span><!--
+		--><span>AP.MATERNO</span><!--
+		--><span>NOMBRE(S)</span><!--
+		--><span>CURP</span>
+
+		<p>{{form.f_nacimiento}}</p><!--
+		--><p>{{form.estado_civil}}</p>
+		<p>{{form.direccion}}</p>
+		<span>FECHA DE NACIMIENTO</span>
+		<span>ESTADO CIVIL</span>
+		<span>DIRECCION</span>
+
+		<p>{{form.estado}}</p><!--
+		--><p>{{form.c_p}}</p><!--
+		--><p>{{form.telefono}}</p><!--
+		--><p>{{form.email}}</p><!--
+		--><span>ESTADO</span><!--
+		--><span>CODIGO POSTAL</span><!--
+		--><span>TELEFONO</span><!--
+		--><span>CORREO ELECTRONICO</span>
+
+		<h6 id="Datos_Escolares">Escuela de Procedencia</h6>
+		<p>{{form.escuela_p}}</p><!--
+		--><p>{{form.direccion_p}}</p><!--
+		--><span>NOMBRE DE LA ESCUELA</span><!--
+		--><span>DIRECCION</span><!--
+		--><p>{{form.municipio_p}}</p><!--
+		--><p>{{form.estado_p}}</p><!--
+		--><p>{{form.c_p}}</p><!--
+		--><span>MUNICIPIO</span><!--
+		--><span>ESTADO</span><!--
+		--><span>CODIGO POSTAL</span>
+	</section>
+
+	<section id="Documentos">
+		<h6>Documentos</h6>
+		<p>TODOS LOS DOCUMENTOS SERAN PRESENTADOS EN ORIGINAL Y DOS COPIAS</p>
+
+		<ul>
+			<li> <span></span> ACTA DE NACIMIENTO</li>
+			<li> <span></span> CERTIFICADO DE PREPARATORIA</li>
+			<li> <span></span> CURP DE PREPARATORIA</li>
+			<li> <span></span> CURP AMPLIADA AL 200%</li>
+			<li> <span></span> IDENTIFICACION OFICIAL</li>
+			<li> <span></span> 6 FOTOGRAFIAS TAMAÑO INFANTIL B/N CON FONDO BLANCO, EN PAPEL MATE, NO INSTANTANEAS</li>
+		</ul>
+	</section>
+
+	<section id="Datos_Incripcion">
+		<h6>DATOS DE INSCRIPCION</h6>
+		<ul>
+			<li>
+				<span></span><p>FECHA DE INICIO</p>
+			</li>
+			<li>
+				<span></span>
+				<p>MODALIDAD</p>
+			</li>
+			<li>
+				<span></span>
+				<p>HORARIO</p>
+			</li>
+			<li>
+				<span></span>
+				<p>NOMBRE DEL ASESOR</p>
+			</li>
+			<li>
+				<span></span>
+				<p>FECHA DE INSCRIPCION</p>
+			</li>
+		</ul>
+	</section>
+
+	<p id ="firma">FIRMA DEL ALUMNO</p>
+</section>
+</body>
+
+
+</style>
+</html>
