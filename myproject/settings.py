@@ -43,7 +43,8 @@ MEDIA_ROOT ='/home/jaed/webapps/static_media/carga'
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join( BASE_DIR, 'static') 
+STATIC_ROOT = '/home/jaed/webapps/static_media'
+#os.path.join( BASE_DIR, 'static') 
 
 
 STATIC_URL = '/static/'
