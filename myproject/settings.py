@@ -37,7 +37,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_ROOT =ss'/home/jaed/webapps/static_media/carga'
+MEDIA_ROOT ='/home/jaed/webapps/static_media/carga'
 # os.path.join(BASE_DIR, 'myproject/carga')
 
 
