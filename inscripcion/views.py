@@ -9,8 +9,6 @@ from django.forms import ModelForm
 
 
 
-
-
 class AlumnoForm(ModelForm):
 	class Meta:
 		model = Alumno
