@@ -11,14 +11,13 @@
     {% block style %}  
 
     {% endblock style %}
-      <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL}}css/style.less">
-      <script type="text/javascript" src="{{STATIC_URL}}js/less.js"></script>
+      <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/style.css">
       <script type="text/javascript" src="{{STATIC_URL}}js/jquery-2.0.3.min.js"></script> 
       <script type="text/javascript" src="{{STATIC_URL}}js/jquery.leanModal.min.js"></script> 
       <script type="text/javascript" src="{{STATIC_URL}}js/menu_estatico.js"></script> 
+      <script type="text/javascript" src="{{ STATIC_URL}}js/modernizr.js" ></script>
     <!--[if lte IE 8]>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/styleIE.css" />
-    <script type="text/javascript" src="{{ STATIC_URL}}js/modernizr.js" ></script>
     <![endif]-->
   </head>
   <body> 
@@ -68,7 +67,6 @@
       <section class="contenido"> 
         {% block contenido %}
         
-
 
         {% endblock contenido %}
       </section>               

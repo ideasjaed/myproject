@@ -15,7 +15,7 @@ from django.forms import ModelForm
 class AlumnoForm(ModelForm):
 	class Meta:
 		model = Alumno
-		fields = ('ap_paterno','ap_materno','nombre','curp','f_nacimiento','estado_civil','direccion','estado','c_p','email','escuela_p','direccion_p','municipio_p','estado_p','c_p')
+		fields = ('ap_paterno','ap_materno','nombre','curp','f_nacimiento','estado_civil','direccion','estado','c_p','telefono','email','escuela_p','direccion_p','municipio_p','estado_p','c_p')
 
 def ins_Lic(request):
         i = Carrera.objects.get(tipo="Licenciatura");

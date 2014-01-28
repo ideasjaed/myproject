@@ -20,7 +20,6 @@ urlpatterns += patterns('publico.views',
 	url(r'^contacto/$','contacto'),
 	url(r'^login/$', 'login_v'),
 	url(r'^ingresar/$', 'ingresar'),
-	url(r'^Ficha/$','Ficha'),
 
 	
 	url(r'^pdf$','pdf'),

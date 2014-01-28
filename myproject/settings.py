@@ -37,15 +37,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_ROOT ='/home/jaed/webapps/static_media/carga'
-# os.path.join(BASE_DIR, 'myproject/carga')
+#MEDIA_ROOT ='/home/jaed/webapps/static_media/carga'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'myproject/carga')
 
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = '/home/jaed/webapps/static_media'
-#os.path.join( BASE_DIR, 'static') 
-
+#STATIC_ROOT = '/home/jaed/webapps/static_media'
+STATIC_ROOT = os.path.join( BASE_DIR, 'static') 
 
 STATIC_URL = '/static/'
 
@@ -81,15 +80,13 @@ ROOT_URLCONF = 'myproject.urls'
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='sistemacesic@gmail.com'
-EMAIL_HOST_PASSWORD='chio123456'
+EMAIL_HOST_PASSWORD='chio1234'
 EMAIL_PORT=587
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,'myproject/plantillas'),
-    os.path.join(BASE_DIR,'myproject/plantillas/publico'),
-    os.path.join(BASE_DIR,'myproject/plantillas/SAED'),
 )
 
 INSTALLED_APPS = (
@@ -104,6 +101,8 @@ INSTALLED_APPS = (
     'publico',
     'saed',
     'inscripcion',
+    'south',
+    
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

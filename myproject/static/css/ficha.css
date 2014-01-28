@@ -1,0 +1,408 @@
+@font-face {
+  font-family: "JEBold";
+  src: url('fonts/RobotoCondensed-Bold.ttf'), url('fonts/RobotoCondensed-BoldItalic.ttf');
+}
+@font-face {
+  font-family: "JERegular";
+  src: url('fonts/RobotoCondensed-Regular.ttf');
+}
+body {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  background-color: #DEDEDE;
+}
+.r {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+}
+h1,
+h2,
+span,
+li {
+  font-family: 'JEBold';
+}
+h3,
+h6,
+p {
+  font-family: "JERegular";
+}
+h6 {
+  text-transform: uppercase;
+}
+#contenido {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  width: 21cm;
+  height: 26cm;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(21, 21, 21, 0.5);
+  padding: 10px;
+}
+#contenido header {
+  height: 3.5cm;
+}
+#contenido header img {
+  padding-left: 10px;
+  height: 3.5cm;
+  width: 3.2cm;
+  display: inline-block;
+  vertical-align: top;
+}
+#contenido header #FHead {
+  text-align: center;
+  vertical-align: top;
+  width: 15cm;
+  height: 3.5cm;
+  margin-left: 15px;
+  display: inline-block;
+}
+#contenido header #FHead h1 {
+  font-size: 1.7em;
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+#contenido header #FHead h2 {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+#contenido h3 {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  width: 10cm;
+  height: 1.4em;
+  line-height: 1.4em;
+  font-size: 1.5em;
+  margin-left: 6.3cm;
+  margin-top: -10px;
+  border-radius: 15px;
+  display: block;
+  float: left;
+  position: relative;
+  background-color: #E3E3E3;
+  text-align: center;
+  border: 1px #404040 solid;
+  font-weight: 100;
+}
+#contenido #foto {
+  float: right;
+  width: 2.5cm;
+  height: 3cm;
+  margin-top: -10px;
+  margin-right: 1.5cm;
+  border: solid 2px #545454;
+}
+#contenido #foto span {
+  line-height: 100px;
+  padding-left: 25px;
+}
+#contenido #datosPersonales {
+  clear: both;
+  position: relative;
+  top: -70px;
+}
+#contenido #datosPersonales p {
+  display: inline-block;
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: .95em;
+  text-align: center;
+  padding: 3px 0 3px;
+}
+#contenido #datosPersonales h6 {
+  display: inline-block;
+  margin-left: 14px;
+  margin-right: 13cm;
+  width: 5cm;
+  background-color: #E3E3E3;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  font-size: 1em;
+  font-weight: 100;
+  border-radius: 10px;
+  border: #404040 1px solid;
+  margin-bottom: 10px;
+  padding: 4px 0 4px 0;
+}
+#contenido #datosPersonales > :nth-child(2),
+#contenido #datosPersonales > :nth-child(3),
+#contenido #datosPersonales > :nth-child(4) {
+  width: 5cm;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+#contenido #datosPersonales > :nth-child(2) {
+  margin-left: 15px;
+  border-left: 1px solid #000000;
+  border-radius: 1px 0 0 1px;
+}
+#contenido #datosPersonales > :nth-child(4) {
+  border-right: 1px solid #000000;
+  border-radius: 0 1px 1px 0;
+}
+#contenido #datosPersonales > :nth-child(5) {
+  border: 1px solid #000000;
+  width: 3.99cm;
+  margin-left: 5px;
+  border-radius: 2px;
+}
+#contenido #datosPersonales span {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  width: 5cm;
+  text-align: center;
+  font-size: 0.7em;
+  margin-left: 3px;
+  position: relative;
+  height: 11px;
+  top: -3px;
+  font-weight: 600;
+}
+#contenido #datosPersonales > :nth-child(6) {
+  margin-left: 20px;
+}
+#contenido #datosPersonales > :nth-child(9) {
+  width: 4cm;
+  margin-left: 5px;
+}
+#contenido #datosPersonales > :nth-child(10),
+#contenido #datosPersonales > :nth-child(11),
+#contenido #datosPersonales > :nth-child(12),
+#contenido #datosPersonales > :nth-child(16),
+#contenido #datosPersonales > :nth-child(17),
+#contenido #datosPersonales > :nth-child(18),
+#contenido #datosPersonales > :nth-child(19) {
+  border: 1px solid #000000;
+  margin-left: 5px;
+  border-radius: 2px;
+}
+#contenido #datosPersonales > :nth-child(10),
+#contenido #datosPersonales > :nth-child(13) {
+  width: 4cm;
+  margin-left: 15px;
+}
+#contenido #datosPersonales > :nth-child(11),
+#contenido #datosPersonales > :nth-child(14) {
+  width: 3cm;
+}
+#contenido #datosPersonales > :nth-child(12),
+#contenido #datosPersonales > :nth-child(15) {
+  width: 12cm;
+}
+#contenido #datosPersonales > :nth-child(16),
+#contenido #datosPersonales > :nth-child(20) {
+  margin-left: 15px;
+  width: 4cm;
+}
+#contenido #datosPersonales > :nth-child(17),
+#contenido #datosPersonales > :nth-child(21) {
+  width: 3cm;
+}
+#contenido #datosPersonales > :nth-child(18),
+#contenido #datosPersonales > :nth-child(22) {
+  width: 3.5cm;
+}
+#contenido #datosPersonales > :nth-child(19),
+#contenido #datosPersonales > :nth-child(23) {
+  width: 8.44cm;
+  margin-left: 4px;
+}
+#contenido #datosPersonales > :nth-child(25),
+#contenido #datosPersonales > :nth-child(26),
+#contenido #datosPersonales > :nth-child(29),
+#contenido #datosPersonales > :nth-child(30),
+#contenido #datosPersonales > :nth-child(31) {
+  border: solid 1px #000000;
+  border-radius: 2px;
+}
+#contenido #datosPersonales > :nth-child(25),
+#contenido #datosPersonales > :nth-child(27) {
+  margin-left: 15px;
+  width: 10cm;
+}
+#contenido #datosPersonales > :nth-child(26),
+#contenido #datosPersonales > :nth-child(28) {
+  width: 9.29cm;
+  margin-left: 5px;
+}
+#contenido #datosPersonales > :nth-child(29),
+#contenido #datosPersonales > :nth-child(32) {
+  width: 4cm;
+  margin-left: 15px;
+}
+#contenido #datosPersonales > :nth-child(30),
+#contenido #datosPersonales > :nth-child(33) {
+  width: 5cm;
+  margin-left: 10px;
+}
+#contenido #datosPersonales > :nth-child(31),
+#contenido #datosPersonales > :nth-child(34) {
+  width: 5cm;
+  margin-left: 10px;
+  margin-right: 145px;
+}
+#Datos_Escolares {
+  margin-top: 15px;
+}
+#Documentos {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  position: relative;
+  width: 19.7cm;
+  margin-top: -45px;
+  margin-right: 35px;
+}
+#Documentos h6 {
+  display: inline-block;
+  margin-right: 13cm;
+  width: 5cm;
+  background-color: #E3E3E3;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  font-size: 1em;
+  font-weight: 100;
+  border-radius: 10px;
+  border: #404040 1px solid;
+  margin-bottom: 10px;
+  padding: 4px 0 4px 0;
+  margin-top: 0px;
+}
+#Documentos p {
+  font-size: .9em;
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  font-weight: 600;
+  margin-top: -5px;
+  border-top: 2px solid #080808;
+}
+#Documentos ul {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  margin-top: 12px;
+}
+#Documentos ul li {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  width: 49%;
+  font-size: 1em;
+  height: 1.2em;
+  vertical-align: top;
+  padding: 0 0 3px 0 ;
+}
+#Documentos ul li span {
+  margin-top: 2px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #121212;
+}
+#Datos_Incripcion {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  margin-top: 45px;
+  clear: both;
+  width: 20cm;
+}
+#Datos_Incripcion h6 {
+  display: inline-block;
+  margin-right: 13cm;
+  width: 5cm;
+  background-color: #E3E3E3;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  font-size: 1em;
+  font-weight: 100;
+  border-radius: 10px;
+  border: #404040 1px solid;
+  margin-bottom: 10px;
+  padding: 4px 0 4px 0;
+  margin-top: 0px;
+}
+#Datos_Incripcion ul {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+}
+#Datos_Incripcion ul li {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+}
+#Datos_Incripcion ul li span {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  border: 2px solid #393939;
+  width: 100%;
+  height: 30px;
+  border-radius: 2px;
+}
+#Datos_Incripcion ul li p {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  clear: both;
+  top: -5px;
+  position: relative;
+}
+#Datos_Incripcion ul li:nth-child(1) {
+  width: 4.5cm;
+}
+#Datos_Incripcion ul li:nth-child(2) {
+  width: 4.5cm;
+  margin-left: 50px;
+}
+#Datos_Incripcion ul li:nth-child(3) {
+  width: 4.5cm;
+  margin-left: 162px;
+}
+#Datos_Incripcion ul li:nth-child(4) {
+  width: 10.43cm;
+}
+#Datos_Incripcion ul li:nth-child(5) {
+  width: 4.5cm;
+  margin-left: 162px;
+}
+p#firma {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  margin-left: 5cm;
+  text-align: center;
+  margin-top: 55px;
+  border-top: 2px solid #000000;
+  display: inline-block;
+  position: relative;
+  width: 10cm;
+}

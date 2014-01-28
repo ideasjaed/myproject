@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block titulo %} {% endblock titulo%} </title>      
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}css/SAED.css">
+  <meta name="description" content="Sistema Educativo CESIC" />
+  <meta name="keywords" content="Estudios,Universidad,Prepa Abierta" />
+  <meta name="author" content="JAED" />
+  <link rel="shortcut icon" href="{{STATIC_URL}}img/sp.png"> 
+  
+  <!--[if lte IE 8]>
+   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+   <link rel="stylesheet" type="text/css" href="css/styleIE.css" />
+   <script type="text/javascript" src="js/modernizr.js" ></script>
+  <![endif]-->
+</head>
+   <body> 
+  <div id="jd">
+      <header>
+        <a href="/" class="Cesion">Cerrar Cesion</a>
+        <h1>Sistema Administrativo para Estudiantes y Docentes</h1>
+        <div id="logo"><a  href="/SAED"> <img src="{{ STATIC_URL}}img/LogoSimple.png" ></a></div>
+        </ul>
+      <nav>
+        <ul>
+          <li> <a href='/SAED/calificaciones'><p>Calificaciones</p> </a></li>
+          <li> <a href='/SAED/inscripciones'> <p>Inscripciones</p>  </a></li>
+          <li> <a href='/SAED/calendario'>    <p>Calendario</p>     </a></li>
+          <li> <a href='/SAED/encuestas'>     <p>Encuestas</p>      </a></li>
+        </ul>
+      </nav >
+      </header>
+
+         <div class="contenido"> 
+       {% block contenido %}
+        
+
+        {% endblock contenido %}
+  
+        </div>   
+        </body>            
+
+   <div id="bgf">
+    <footer id="footer">
+      <Section id="Footleft">  
+      <p>Dirección
+      <span>Calle Central S/N Barrio Concepción</span>
+      </p>
+
+      </Section>
+    </footer>
+            <div id="Autor">
+          <p>© 2014 <span>JAED - Todos los derechos reservados</span></p>
+        </div>
+  </div>
+   </div>
+</body>
+</html>

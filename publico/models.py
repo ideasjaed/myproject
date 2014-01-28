@@ -7,6 +7,7 @@ class Slide(models.Model):
 	contenido = models.TextField()
 	fecha = models.DateTimeField(auto_now_add=True)
 	imagen = models.ImageField(upload_to='carrera',verbose_name='imagen slite',blank=True)
+
 	def __unicode__ (self):
 		return self.titulo
 
@@ -19,7 +20,8 @@ class Carrera(models.Model):
 	p_egreso   = models.TextField('Perfil de Egreso ',max_length = 200,blank=True)
 	requisitos = models.TextField()
 	imagen     = models.ImageField(upload_to='carrera',verbose_name ='Image',blank=True)
-	m_c        = models.ImageField(upload_to='carrera',verbose_name ='Image2',blank=True)
+	m_c        = models.FileField(upload_to='carrera',verbose_name ='Mapa Curricular',blank=True)
+
 
 	class Meta:
 		unique_together = ("tipo", "nombre")

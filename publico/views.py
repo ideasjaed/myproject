@@ -13,6 +13,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.template import  RequestContext
 from django.views.generic.edit import FormView
 from publico.models import Slide, Carrera
+from inscripcion.models import *
 from publico.forms import *
 from reportlab.pdfgen import canvas
 from io import BytesIO
@@ -28,23 +29,22 @@ class ContactForm(forms.Form):
 	mensaje = forms.CharField(widget= forms.Textarea)
 
 
-
 def index(request):
         slide = Slide.objects.all().order_by("-fecha")
-        return render_to_response("index.html",{'s':slide}, context_instance=RequestContext(request))
+        return render_to_response("publico/index.html",{'s':slide}, context_instance=RequestContext(request))
 
 def ofertaEducativa(request):
         carrera = Carrera.objects.all()
-        return render_to_response("ofertaEducativa.html",{'datos':carrera}, context_instance=RequestContext(request))
+        return render_to_response("publico/ofertaEducativa.html",{'datos':carrera}, context_instance=RequestContext(request))
 
 def nosotros(request):
-		return render_to_response("nosotros.html", context_instance=RequestContext(request))
+		return render_to_response("publico/nosotros.html", context_instance=RequestContext(request))
 
 def directorio(request):
-        return render_to_response("directorio.html", context_instance=RequestContext(request))
+        return render_to_response("publico/directorio.html", context_instance=RequestContext(request))
 
 def login_v(request):
-        return render_to_response("login.html", context_instance=RequestContext(request))
+        return render_to_response("publico/login.html", context_instance=RequestContext(request))
 
 def contacto(request):
     if request.method == 'POST':
@@ -56,15 +56,65 @@ def contacto(request):
             contenido+='Comunicarse a: '+form.cleaned_data['correo']
             correo = EmailMessage  (titulo ,contenido,to=['sistemacesic@gmail.com'])
             correo.send()
-        return HttpResponseRedirect('/contacto')
+        return HttpResponseRedirect('publico/contacto')
     
     else:
         form=ContactForm()
-        return render_to_response('contacto.html', {'form':form,},context_instance=RequestContext(request))
+        return render_to_response('publico/contacto.html', {'form':form,},context_instance=RequestContext(request))
+
+def ingresar(request):
+    #try:
+    if request.method == 'POST':  #obtenemos los datos
+        user = request.POST['username'] #obtenemos al usuario
+        passw = request.POST['password'] #obtenemos la contraseña
+        opt = request.POST['lgopt'] #obtenemos el tipo de usuario
+
+        if opt == 'Alumno': # si se eligio al alumno'
+            a = Alumno.objects.filter(matricula=user, password=passw)
+            if a[0]!= False:
+                return render_to_response("SAED/plantilla.html",context_instance=RequestContext(request))
+            elif a[0]==False: 
+                return HttpResponse("El alumno no existe")
+
+        elif opt == 'Profesor':
+            formu = AuthenticationForm(request.POST)
+            if formu.is_valid:
+                acceso = authenticate(username=user, password=passw)
+                if acceso is not None:
+                    if acceso.is_active:
+                        login(request, acceso)
+                        return HttpResponse("Bien el el profesor existe")#return render_to_response('Docentes.html',{'docente':request.user.username},context_instance=RequestContext(request))
+                else:
+                    return HttpResponse("nel pastel existe")#return render_to_response('Docentes.html',context_instance=RequestContext(request))
+            else:
+                HttpResponse("fallo en acceso")
+    else:
+        formu = AuthenticationForm()
+        return HttpResponseRedirect('/')
+    #except: 
+     #   return HttpResponse("fallo")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def SAED(request):
                 return render_to_response("SAED_inicio.html", context_instance=RequestContext(request))
+
+
+
+
 
 
 @login_required(login_url='/login')
@@ -73,6 +123,9 @@ def SAED_calif(request):
         info = Alumno.objects.get(id=user)
         calificacion = Calificacione.objects.all()
         return render_to_response("SAED_calificaciones.html",{'cal':info,'mate':calificacion}, context_instance=RequestContext(request))
+
+
+
 
 def SAED_Calend(request):
                 return render_to_response("SAED_calendario.html", context_instance=RequestContext(request))
@@ -114,36 +167,10 @@ def pdf(request):
     # Draw things on the PDF. Here's where the PDF generation happens.
     # See the ReportLab documentation for the full list of functionality.
     p.drawString(100, 100, "Hello world.")
-    
 
-    
+
     # Close the PDF object cleanly, and we're done.
     p.showPage()
     p.save()
     return response
 
-
-def ingresar(request):
-    if request.method == 'POST':
-        formu = AuthenticationForm(request.POST)
-        if formu.is_valid:
-            usuario = request.POST['username']
-            clave = request.POST['password']
-            acceso = authenticate(username=usuario, password=clave)
-            if acceso is not None:
-                if acceso.is_active:
-                    login(request, acceso)
-                    return render_to_response('SAED_inicio.html',{'ful_name':request.user.username},context_instance=RequestContext(request))
-                else:
-                    return render_to_response('noactivo.html',context_instance=RequestContext(request))
-            else:
-                return render_to_response('nosusuario.html',context_instance=RequestContext(request))        
-    else:
-        formu = AuthenticationForm()
-        return HttpResponseRedirect('/')
-        
-
-
-
-def Ficha(request):
-    return render_to_response("FichaIESUM.html", context_instance=RequestContext(request))
