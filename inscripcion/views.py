@@ -4,7 +4,6 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.http import HttpResponse,HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from inscripcion.models import Alumno, Carrera
-
 from django import forms
 from django.forms import ModelForm
 
