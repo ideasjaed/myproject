@@ -4,7 +4,7 @@ from publico.models import Carrera
 class Docente(models.Model):
 	Nombre         = models.CharField(max_length=200)
 	estudios       = models.CharField('estudios universitarios',max_length=100,help_text='licenciatura o carrera tecnica')
-	especialidad   = models.CharField(max_length=100,help_text='especialidad como maestria u doctorado')
+	especialidad   = models.CharField(max_length=100,help_text='especialidad como maestria u doctorado',blank=True)
 	especialidad_2 = models.CharField('otra especialidad',max_length=100, help_text='en caso de tener mas especialidades llenar este campo',blank=True,null=True)
 	especialidad_3 = models.CharField('otra especialidad',max_length=100, help_text='en caso de tener mas especialidades llenar este campo',blank=True,null=True)
 	foto           = models.ImageField(upload_to='docentes',verbose_name=u'Fotografia',blank=True)

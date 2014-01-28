@@ -40,8 +40,6 @@ def ofertaEducativa(request):
 def nosotros(request):
 		return render_to_response("publico/nosotros.html", context_instance=RequestContext(request))
 
-def directorio(request):
-        return render_to_response("publico/directorio.html", context_instance=RequestContext(request))
 
 def login_v(request):
         return render_to_response("publico/login.html", context_instance=RequestContext(request))
