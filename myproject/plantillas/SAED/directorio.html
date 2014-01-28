@@ -1,0 +1,54 @@
+{% extends "publico/plantilla.html" %}
+
+
+{% block titulo %}C E S I C - Nosotros{% endblock titulo %}
+
+
+{% block contenido %}
+
+	<section id ="Directorio">
+
+		<div class="tiulo_Directorio">
+			<span></span>
+			<h4>Directorio</h4>
+		</div>
+		
+			
+		<ul><li><img src="{{STATIC_URL}}img/noavatar.png" alt=""></li>
+			<li>MTRA. ROCIO DEL CARMEN LINO PEREZ</li>
+			<li>Lic. En Computación</li>
+			<li>Mtra. En ciencias de la Computación con especialidad en Bases de Datos</li>
+			<li>DIRECTORA</li>
+		</ul>
+
+		<ul><li><img src="{{STATIC_URL}}img/noavatar.png" alt=""></li>
+			<li>MTRO. JUAN MANUEL DE LA CRUZ GUZMAN</li>
+			<li>Lic. en Administración de Empresas</li>
+			<li>Mtro. En Administración de Empresas</li>
+			<li>SUBDIRECTOR</li>
+		</ul>
+
+		
+
+		<div class="tiulo_Directorio">
+			<span></span>
+			<h4>Docentes</h4>
+		</div>
+			{% for dato in docente %}
+		<ul><li><img src="{{MEDIA_URL}}{{dato.foto}}" alt=""></li>
+			<li>{{dato.Nombre}}</li>
+			<li>{{dato.estudios}}</li>
+			<li>{{dato.especialidad}}</li>
+			<li>{{dato.especialidad_2}}</li>
+			<li>{{dato.especialidad_3}}</li>
+			<li>DOCENTE</li>
+		</ul>
+		
+{% endfor %}
+
+
+	</section>
+
+
+
+{% endblock contenido %}

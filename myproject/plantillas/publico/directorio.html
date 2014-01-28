@@ -11,9 +11,9 @@
 			<span></span>
 			<h4>Directorio</h4>
 		</div>
-
-		<ul><li><img src="{{ STATIC_URL}}img/noavatar.png" alt=""></li>
-			<li>MTRA. ROCIO DEL CARMEN LINO PEREZ</li>
+			{% for dato in datos %}
+		<ul><li><img src="{{MEDIA_URL}}{{dato.Fotografia}}" alt=""></li>
+			<li>{{dato.Nombre}</li>
 			<li>Lic. En Computación</li>
 			<li>Mtra. En ciencias de la Computación con especialidad en Bases de Datos</li>
 			<li>DIRECTORA</li>
@@ -124,7 +124,7 @@
 			</ul>
 
 
-
+{% endfor %}
 	</section>
 
 

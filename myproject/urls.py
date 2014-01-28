@@ -16,7 +16,7 @@ urlpatterns += patterns('publico.views',
 	url(r'^$', 'index'),
 	url(r'^ofertaEducativa/$','ofertaEducativa'),
 	url(r'^nosotros/$','nosotros'),
-	url(r'^directorio/$','directorio'),
+	
 	url(r'^contacto/$','contacto'),
 	url(r'^login/$', 'login_v'),
 	url(r'^ingresar/$', 'ingresar'),
@@ -24,14 +24,18 @@ urlpatterns += patterns('publico.views',
 	
 	url(r'^pdf$','pdf'),
 
+
+	)
+urlpatterns += patterns('saed.views',
 	##SAED
-	url(r'^SAED/$','SAED'),
-	url(r'^SAED/calificaciones/$','SAED_calif'),
-	url(r'^SAED/calendario/$','SAED_Calend'),	
-	url(r'^SAED/configuracion/$','SAED_Config'),	
-	url(r'^SAED/encuestas/$','SAED_encuestas'),
-	url(r'^SAED/informacion/$','SAED_informacion'),	
-	url(r'^SAED/inscripciones/$','SAED_inscripcion'),
+	#url(r'^SAED/$','SAED'),
+	#url(r'^SAED/calificaciones/$','SAED_calif'),
+	#url(r'^SAED/calendario/$','SAED_Calend'),	
+	#url(r'^SAED/configuracion/$','SAED_Config'),	
+	#url(r'^SAED/encuestas/$','SAED_encuestas'),
+	#url(r'^SAED/informacion/$','SAED_informacion'),	
+	#url(r'^SAED/inscripciones/$','SAED_inscripcion'),
+	url(r'^directorio/$','directorio'),
 				
 
      	 )	
