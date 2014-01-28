@@ -99,7 +99,8 @@ def ingresar(request):
 
 
 
-
+def ico(request):
+    return render_to_response('publico/iconos.html',context_instance=RequestContext(request))
 
 
 
